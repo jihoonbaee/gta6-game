@@ -1,5 +1,9 @@
 # Neon Harbor: Last Light
 
+[![make.fun · gta6-01](https://make.fun/badge/gta6-01.svg)](https://make.fun/bounty/gta6-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+[![rank](https://make.fun/badge/gta6-01/jihoonbaee/gta6-game/rank.svg)](https://make.fun/bounty/gta6-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+[![reward](https://make.fun/badge/gta6-01/jihoonbaee/gta6-game/reward.svg)](https://make.fun/bounty/gta6-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-01)
+
 An original, fully local 3D crime game set in the sunlit coastal grid of Port Meridian. Built during the recorded gta6-01 session with procedural geometry, canvas-generated signs, a locally vendored Three.js engine, and synthesized WebAudio. No account, CDN, font download, build step, or asset service is required.
 
 Run `node serve.ts`, then open `http://localhost:8080` in desktop Chrome. Press Start Your Shift. The amber route and floating beacon lead to each contract. Four connected jobs cover car theft, a harbor delivery, an informant meeting on foot, and reaching a safehouse after the heat expires. Completed jobs reward cash and save locally; finishing the story opens another shift.

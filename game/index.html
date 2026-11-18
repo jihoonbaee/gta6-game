@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#10212a">
+<title>Neon Harbor: Last Light</title>
+<link rel="stylesheet" href="./src/style.css">
+<style>.vehicle{bottom:238px}.minimap-wrap{bottom:42px}.combat-hint{bottom:89px}.combat-hint #ammo{width:auto;margin-left:0;color:#f4d387}@media(max-width:760px){.vehicle{bottom:188px}.combat-hint{bottom:84px}}</style>
+</head>
+<body>
+<canvas id="world" aria-label="Neon Harbor open-world crime game"></canvas>
+<div class="grain"></div>
+<header class="topline"><div class="brand"><span class="brand-mark">NH</span><span>NEON HARBOR <small>LAST LIGHT</small></span></div><div class="district"><i></i> PORT MERIDIAN <span> / </span> EAST QUAY</div><div class="clock"><b id="clock">17:42</b><small>SHIFT TIME</small></div></header>
+<section id="mission" class="mission"><div class="eyebrow"><i></i><span id="mission-tag">NEW CONTRACT</span><span class="mission-code" id="mission-code">01 / 04</span></div><h1 id="mission-title">A LIGHTER TOUCH</h1><p id="mission-copy">Find and enter the marked sedan.</p><div class="mission-progress"><span id="objective">01</span><div><strong id="objective-title">Locate the marked sedan</strong><small id="objective-sub">Follow the amber marker to the vehicle</small></div></div></section>
+<aside class="money"><span>AVAILABLE CASH</span><b>$<em id="cash">2,450</em></b><small><i></i> <span id="shift-earnings">+$0 THIS SHIFT</span></small></aside>
+<section class="wanted"><span>HEAT</span><div id="stars" class="stars"><b>★</b><b>★</b><b>★</b><b>★</b><b>★</b></div><small id="heat-copy">QUIET STREETS</small></section>
+<section class="vitals"><div class="vital-label"><span>CONDITION</span><b id="health-text">100%</b></div><div class="bar"><i id="health-bar"></i></div><div class="vital-label armor-label"><span>FOCUS</span><b id="focus-text">80%</b></div><div class="bar focus"><i id="focus-bar"></i></div></section>
+<section class="vehicle" id="vehicle-hud"><div class="speed"><b id="speed">000</b><small>KM/H</small></div><div class="gear"><span>GEAR</span><b id="gear">P</b></div><div class="vehicle-name"><span>PERSONAL VEHICLE</span><b id="vehicle-name">ON FOOT</b></div><div class="fuel"><span>FUEL</span><i><b></b></i></div></section>
+<div class="minimap-wrap"><canvas id="map" width="208" height="208"></canvas><div class="map-label">PORT MERIDIAN <span>LIVE</span></div><div class="map-coords" id="coords">E 04 · N 07</div></div>
+<div class="toast" id="toast"><span class="toast-icon">!</span><span id="toast-text">You are being watched.</span></div>
+<div class="prompt" id="prompt"><kbd>E</kbd><span id="prompt-text">STEAL VEHICLE</span></div>
+<div class="combat-hint"><kbd>F</kbd> FIRE <span></span><kbd>R</kbd> RELOAD <span></span><span id="ammo">12 / ∞</span></div>
+<div class="bottom-left"><div class="location-pin">⌖</div><div><b id="location">PORT MERIDIAN</b><small>PORT MERIDIAN, SAN AURELIO</small></div></div>
+<div class="bottom-right"><div class="keycap">W A S D <span>MOVE</span></div><div class="keycap">SHIFT <span>SPRINT</span></div><div class="keycap">E <span>INTERACT</span></div><button id="pause-button" aria-label="Pause game">Ⅱ</button></div>
+<div id="overlay" class="overlay"><div class="overlay-sky"></div><div class="overlay-card"><div class="overlay-kicker"><i></i> A NEON HARBOR STORY</div><h2 id="overlay-title">THE CITY<br><em>OWES YOU.</em></h2><p id="overlay-copy">One last run through Port Meridian.<br>Four jobs. No clean exits.</p><button id="start-button"><span>START YOUR SHIFT</span><b>↗</b></button><div class="save-note"><span>◉</span> AUTO-SAVE <span id="profile-note" hidden>• LOCAL PROFILE FOUND</span></div></div><div class="overlay-footer">PORT MERIDIAN <span>34° 02' N / 118° 14' W</span></div></div>
+<div id="pause" class="pause hidden"><div class="pause-panel"><span class="overlay-kicker"><i></i> SHIFT SUSPENDED</span><h2>TAKE A<br><em>BREATHER.</em></h2><p>Your progress is saved locally.</p><button id="resume-button">RESUME SHIFT <b>↗</b></button><button id="restart-button" class="subtle-button">RESTART FROM CHECKPOINT</button></div></div>
+<div id="mission-complete" class="mission-complete hidden"><span>CONTRACT COMPLETE</span><b>+$<i id="reward">850</i></b><small>AUTOSAVED</small></div>
+<div id="damage-flash"></div>
+<script src="./vendor/three.min.js"></script>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

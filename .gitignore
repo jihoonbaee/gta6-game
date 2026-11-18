@@ -1,0 +1,4 @@
+# Exclude local verification tools, generated output, and server logs from the snapshot.
+.checks/
+out/
+*.log
